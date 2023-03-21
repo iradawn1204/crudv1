@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConsumerController;
-use App\Http\Controllers\UserController;
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ConsumerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,17 @@ Route::get('/', function () {
 });
 
 
-route::get('/',[ConsumerController::class,'index'])->middleware('auth');
+
+
+
+route::get('/','App\Http\Controllers\ConsumerController@index')->middleware('auth')->name('consumer.index');
+
+Route::get('edit-consumer/{id}', [ConsumerController::class, 'edit']);
+Route::patch('update-consumer/{id}', [ConsumerController::class, 'update']);
+
+Route::delete('consumer{id} ',[ConsumerController::class, 'destroy'])->name('consumer.destroy');
+
+
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 Route::get('/register', [UserController::class, 'register']);
 

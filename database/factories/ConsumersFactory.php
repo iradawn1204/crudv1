@@ -21,7 +21,7 @@ class ConsumersFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'age' => fake()->numberBetween(18,90),
             'address' => fake()->address(),
-            'contactNo'=>fake()->phoneNumber(),
+            'contactNumber'=>fake()->phoneNumber(),
         ];
     }
 }

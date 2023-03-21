@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
+use App\Models\Consumers; 
 return new class extends Migration
 {
     /**
@@ -20,7 +20,7 @@ return new class extends Migration
         $table->string('age');
         $table->string('address');
         $table->string('email');
-        $table->string('contactNo');
+        $table->string('contactNumber');
         $table->timestamps();
 
        });
