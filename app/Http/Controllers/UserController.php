@@ -47,6 +47,7 @@ class UserController extends Controller
         return redirect("/");
 
     }
+    
 
     public function logout(Request $req){
         auth()->logout();

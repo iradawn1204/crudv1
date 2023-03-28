@@ -28,6 +28,9 @@ route::get('/','App\Http\Controllers\ConsumerController@index')->middleware('aut
 Route::get('edit-consumer/{id}', [ConsumerController::class, 'edit']);
 Route::patch('update-consumer/{id}', [ConsumerController::class, 'update']);
 
+Route::get('create-consumer/', [ConsumerController::class, 'create']);
+Route::patch('store-consumer/', [ConsumerController::class, 'store']);
+
 Route::delete('consumer{id} ',[ConsumerController::class, 'destroy'])->name('consumer.destroy');
 
 
@@ -39,4 +42,6 @@ Route::post('/store', [UserController::class, 'store']);
 
 
 Route::get('/logout', [UserController::class, 'logout']);
+
+
 

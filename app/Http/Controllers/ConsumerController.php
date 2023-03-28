@@ -17,6 +17,30 @@ class ConsumerController extends Controller
 
 
 
+    public function create(){
+        return view ('consumer.create');
+    }
+
+    public function store(Request $request){
+     
+       
+        $validated=$request->validate([
+        
+            'name' => 'nullable|string', 
+            'age' => 'nullable|string',
+            'email' => 'nullable|string', 
+            'address' => 'nullable|string', 
+            'contactNumber' => 'nullable|string'
+        ]); 
+          Consumers::create($request->all());
+
+       
+
+        return redirect()->back()->with('status', 'Customer Updated Successfully');
+
+    }
+
+
     public function edit($consumer)
     {
      

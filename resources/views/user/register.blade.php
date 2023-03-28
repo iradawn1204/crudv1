@@ -1,5 +1,6 @@
 @include('partial.header')
 
+
 <h3>Create an Account</h3>
 <form action="/store" method="POST">
     @csrf
@@ -18,7 +19,7 @@
       name="name">
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
-
+   
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
       <input 
@@ -49,4 +50,10 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   <h6><a href={{"/login"}}>Already have an account? Sign in here.</a></h6>
+ 
+  <style>
+
+
+    </style>
+ 
   @include('partial.footer')

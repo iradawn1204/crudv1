@@ -12,7 +12,8 @@ class Consumers extends Model
     protected $fillable = [
         'name',
         'age',
-        'email',    
+        'email', 
+        'address',
         'contactNumber'
     ];
 }
