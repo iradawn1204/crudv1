@@ -146,6 +146,8 @@ form input {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   font-size: 17px;
 }
+
+
   </style>
   
   @include('partial.footer')

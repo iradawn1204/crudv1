@@ -1,10 +1,9 @@
 @include('partial.header')  
 
-<div id="bg"></div>
 
 <x-nav/>
 
-
+<body>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -44,7 +43,6 @@
                             <label for="">Contact Number</label>
                             <input type="text" name="contactNumber" value="{{$consumer->contactNumber}}" class="form-control">
                         </div>
-                        <div class="form-group mb-3">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
 
@@ -55,16 +53,18 @@
         </div>
     </div>
 </div>
+</body>
 <style>
-#bg {
-  background-image: url('bg.jpg');
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  filter: blur(5px);
+
+    body {
+
+background:url('coffee-shop.jpg');
+
+bottom: ;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+width: 100%;
 }
     </style>
 @include('partial.footer')
